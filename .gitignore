@@ -1,0 +1,7 @@
+app/config/local.neon
+/uploads/*
+/log/*
+!/log/.gitignore
+/temp/*
+!/temp/.gitignore
+/vendor/*

@@ -1,0 +1,28 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+services:
+	- App\Model\PersonDao
+	- App\Model\BirthdayValidator
+	- App\Model\GenderValidator
+	- App\Model\SortOrderValidator
+
+	- App\Components\PeopleOverviewFactory
+	- App\Components\OverviewPaginatorFactory
+
+	- App\Forms\FormFactory
+	- App\Forms\PersonFormFactory
+	- App\Forms\FilterFormFactory
+
+	- Nette\Utils\DateTime
+
+	router: App\Router\RouterFactory::createRouter

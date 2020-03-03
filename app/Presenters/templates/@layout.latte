@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8">
+
+		<title>{ifset title}{include title|stripHtml} | {/ifset}Databáze lidí</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{$basePath}/css/all.min.css">
+		<link rel="stylesheet" href="{$basePath}/css/style.css">
+	</head>
+
+	<body>
+		<header class="main-header">
+			<h1><a n:href="//Homepage:">Databáze lidí</a></h1>
+		</header>
+
+		<main class="main-content">
+			{include content}		
+		</main>
+
+		<footer class="main-footer">
+			<p>Filip Zrubecký</p>
+		</footer>
+
+		{block scripts}
+			<script src="{$basePath}/js/netteForms.min.js"></script>
+			<script src="{$basePath}/js/jquery.js"></script>
+			<script src="{$basePath}/js/nette.ajax.min.js"></script>
+			<script src="{$basePath}/js/main.js"></script>
+		{/block}
+	</body>
+</html>

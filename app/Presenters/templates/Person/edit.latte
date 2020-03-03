@@ -1,0 +1,26 @@
+{block title}Editovat{/block}
+
+{block content}
+   <form n:name="personForm" class="form">
+      <h1 class="form-header">Editovat Člověka</h1>
+      <input n:name="firstName" class="form-input">
+      <input n:name="lastName" class="form-input">
+      <input n:name="birthday" class="form-input">
+      <input n:name="tel" class="form-input">
+
+      <div class="form-group">
+         <label for="gender">Pohlaví</label>
+         <select id="gender" n:name="gender" class="form-select"></select>
+      </div>
+
+      <input n:name="submit" class="btn btn-primary" value="Editovat člověka">
+
+      <div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>
+      
+      <div class="alert alert-danger text-left" n:if="$form->hasErrors()">
+         <span n:foreach="$form->errors as $error">{$error}</span>
+      </div>
+      
+      <a n:href="Homepage:">Zpět na domovskou stránku</a>
+   </form>
+{/block}

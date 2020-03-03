@@ -1,0 +1,325 @@
+/*
+------------------------------------------------------
+GLOBAL
+-------------------------------------------------------
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	min-width: 320px;
+}
+
+.link {
+	text-decoration: none;
+	font-size: 1.0rem;
+	font-weight: bold;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.icon {
+	color: #363636;
+}
+
+.alert {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	margin: 15px 0;
+}
+
+.alert-success {
+	background: #9cedab;
+	color: #003d0b;
+}
+
+.alert-info {
+	background: #ffe388;
+	color: #967544;
+}
+
+.alert-danger {
+	background: #f75858;
+	color: #6e0e0e;
+}
+
+.main-header {
+	padding: 10px 25px;
+	background: #292929;
+	color: #fafafa;
+}
+
+.main-header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.btn {
+	cursor: pointer;
+	max-width: 200px;
+	text-decoration: none;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 0.8rem;
+	transition: background-color 0.5s linear;
+}
+
+.btn a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+.btn-primary {
+	background: #2574A8;
+	color: #fafafa;
+}
+
+.btn-primary:hover {
+	background: #175782;
+}
+
+.btn-secondary {
+	background: #dedede;
+	color: #505050;
+}
+
+.btn-secondary:hover {
+	background: #b0b0b0;
+}
+
+.form {
+	width: 50%;
+	margin: auto;
+	padding: 20px;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #e3e3e3;
+	border-radius: 5px;
+}
+
+.form-input, .form-select {
+	margin-bottom: 15px;
+	border: 1px solid #e3e3e3;
+	background: #fafafa;
+	border-radius: 5px;
+	font-size: 0.9rem;
+}
+
+.form-input:last-child, .form-select:last-child {
+	margin: 0;
+}
+
+.form-header {
+	margin-bottom: 20px;
+}
+
+.form-label {
+	margin-right: 10px;
+}
+
+.form-input, .form-select {
+	padding: 10px 15px;
+}
+
+.form .btn[type="submit"] {
+	margin: 15px 0 15px 0;
+}
+
+.secondary-form {
+	display: flex;
+	align-items: center;
+}
+
+.form-row {
+	display: flex;
+}
+
+.secondary-form .form-input, .secondary-form .form-select, .secondary-form .btn {
+	height: 30px;
+	padding: 5px 10px;
+	margin: 0 10px 0 0;
+}
+
+.main-content {
+	width: 100%;
+	max-width: 100%;
+	padding: 35px 25px;
+}
+
+.main-footer {
+	padding: 15px 0;
+	text-align: center;
+	font-weight: bold;
+	background: #292929;
+	color: #fafafa;
+}
+
+/*
+------------------------------------------------------
+OVERVIEW
+-------------------------------------------------------
+*/
+.people-overview {
+	width: 50%;
+	max-width: 500px;
+	margin: auto;
+}
+
+.overview-control {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #e3e3e3;
+	color: #363636;
+	border-radius: 5px;
+}
+
+.overview-control .icon {
+	margin-left: auto;
+	font-size: 1.8rem;
+}
+
+.control-wrapper {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e3e3e3;
+	padding: 10px;
+}
+
+.control-wrapper:last-child {
+	border: none;
+	margin-bottom: 0;
+}
+
+.people-list {
+	margin-top: 15px;
+}
+
+.person-card {
+	border: 1px solid #e3e3e3;
+	color: #363636;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.person-card:last-child {
+	margin-bottom: 0;
+}
+
+.card-header {
+	display: flex;
+	padding: 5px 25px;
+	border-bottom: 1px solid #e3e3e3;
+	background: #fafafa;
+}
+
+.card-header .icon {
+	font-size: 1.2rem;
+	margin-right: 15px;
+}
+
+.card-header .icon:last-child {
+	margin-right: 0;
+	display: inline-block;
+}
+
+.card-header .created-at {
+	display: inline-block;
+	margin-right: auto;
+}
+
+.card-content {
+	padding: 10px 25px;
+}
+
+.person-item {
+	margin-bottom: 5px;
+}
+
+.person-item-label {
+	font-weight: bold;
+}
+
+.paginator {
+	text-align: center;
+	margin-top: 15px;
+}
+
+/*
+------------------------------------------------------
+MEDIA QUERIES
+-------------------------------------------------------
+*/
+@media only screen and (max-width: 1024px) {
+	.people-overview, .form {
+		width: 65%;
+		max-width: 65%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.people-overview, .form {
+		width: 90%;
+		max-width: 90%;
+	}
+
+	.overview-control .icon {
+		margin-left: auto;
+		font-size: 2rem;
+	}
+
+	.card-header .icon {
+		font-size: 1.4rem;
+		margin-right: 35px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.main-content {
+		padding: 10px 15px;
+	}
+
+	.people-overview, .form {
+		width: 100%;
+		max-width: 100%;
+		padding: 20px 10px;
+	}
+
+	.overview-control .icon {
+		font-size: 1.8rem;
+	}
+
+	.card-header .icon {
+		font-size: 1.2rem;
+		margin-right: 10px;
+	}
+
+	.form .btn[type="submit"] {
+		max-width: 100%;
+		width: 100%;
+	} 
+
+	.button-row {
+		flex-direction: column;
+	}
+
+	.button-row .btn {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	.button-row .btn:last-child {
+		margin: 0;
+	}
+}
